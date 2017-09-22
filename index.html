@@ -14,30 +14,41 @@
   <body>
  
   <div class="container">
-   <div class="map-container">
-        <h3>Map</h3>
-        <div id="map"></div>
-    </div>
-    <div class="chart-container" style="position: relative; height:20vh; width:40vw">
-        <h3>Scatter Plot</h3>
-        <canvas id="scatter"></canvas>
-     
-        <h3>Bar</h3>
-        <canvas id="bar" ></canvas>
+   
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw">
 
-        <h3>Blockchain Price History</h3>1
-        <canvas id="line"></canvas>
+        <h3>Data set: </h3> <a href="https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory#" target="_blank">https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory#</a>
 
-        <h3>Blockchain Circulation</h3>
-        <canvas id="pie"></canvas>
 
-        <h3>Bubble Graph</h3>
+        <h3>Bitcoin Cash Price History</h3>
+        <canvas id="bitcoinCash"></canvas>
+
+        <h3>Ethereum Price History</h3>
+        <canvas id="ethereum"></canvas>
+
+        <h3>Litecoin Price History</h3>
+        <canvas id="litecoin"></canvas>
+
+        <h3>Blockchain Circulation History</h3>
+        <h5> Here would be a good place to represent the volume of each currency, with the data structured as 
+              {
+                x: date,
+                y: price,
+                r: volume
+              }
+          Chart.js uses pixels to calculate radius, so I could create 10 breakpoints within the min and max of the volume data and assign each data object a radius value between 1-10 according to which breakpoint it falls into.
+        </h5>
         <canvas id="bubble"></canvas>
+
     </div> 
 
      
   </div> 
 
-    <script src="./index.js"></script>
+    <script type="text/javascript" src="./litecoin.js"></script> 
+    <script type="text/javascript" src="./ethereum.js"></script> 
+    <script type="text/javascript" src="./bc.js"></script> 
+    <script type="text/javascript" src="./index.js"></script>
+
   </body>
 </html>
